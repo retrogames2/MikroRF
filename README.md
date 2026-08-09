@@ -1,2 +1,81 @@
-# MikroRF
-MikroRF to urządzenie wielofunkcyjne z wieloma narzędziami.
+LCD ESP32C6
+SCK = 18
+MOSI = 19
+RST = 20
+DC = 21
+CS = 22
+BL = 3V3
+VCC = 3v3
+GND = GND
+
+CC1101 ESP32C6
+VCC = 3V3
+GND = GND
+SCK = 6
+MISO = 5
+MOSI = 4
+CSN = 10
+GDO0 = 9
+GDO2 = Nie podłączać
+
+PN532 ESP32C6
+VCC = 3V3
+GND = GND
+SCL = 0
+SDA = 7
+
+JOY ESP32C6
+UP = 3
+DOWN = 23
+SEL = 15
+LEFT = 2
+GND = GND
+
+IR-TX ESP32C6
+VCC - 3V3
+GND = GND
+DAT = 11
+
+NRF24 ESP-WROOM-32
+VCC = 3V3
+GND = GND
+CE = 22
+CSN = 21
+SCK = 18
+MOSI = 23
+MISO = 19
+IRQ = Nie podłączać
+
+PODŁĄCZENIE ZASILANIA NA ESP-WROOM-32 PRZEZ BC547B:
+        				  ________
+					 |ESP32C6 |
+5V ESP-WROOM-32-------|5V__GP1|-----BAZA BC547		GND ESP32C6-----EMITER BC547		GND ESP-WROOM-32-----KOLEKTOR BC547
+
+
+(!)-------------(!)
+     UWAGA!
+Pliki .py wgraj tylko na esp32c6,
+na esp-wroom-32 zaprogramuj tym flasherem,
+jest to zakłócanie BLE:
+https://smoochiee.github.io/Bluetooth-jammer-esp32/flash1
+
+OSTRZEŻENIE!
+SOFTWARE MOŻE BYĆ UŻYTY W NIELEGALNYM CELU,
+ZA ZAKŁÓCANIE NIE SWOJEGO URZĄDZENIA,
+GROŻĄ WYSOKIE GRZYWNY, UŻYWAJ KODU Z ROZWAGĄ.
+
+MODUŁY:
+
+ESP32C6
+ESP-WROOM-32
+LCD ST7789 240x320
+CC1101
+PN532
+NRF24
+NADAJNIK IR
+JOYSTICK 5 PRZYCISKÓW
+TRANZYSTOR BC547B
+OGNIWO LITOWO-JONOWE
+TP4056
+
+
